@@ -16,8 +16,7 @@ import static java.lang.System.out;
 
 class Main {
     public static void main(String[] args) throws InterruptedException {
-        String months[] = {"Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен",
-                "Окт", "Ноя", "Дек"};
+        String months[] = {"Янв", "Фев", "Мар", "Апр", "Май", "Июн", "Июл", "Авг", "Сен", "Окт", "Ноя", "Дек"};
         final int REVENUE_MONTH = 10_000;
         GregorianCalendar gcalendar = new GregorianCalendar();
         String nameMonth = months[gcalendar.get(Calendar.MONTH)];

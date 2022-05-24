@@ -1,15 +1,15 @@
-import java.util.concurrent.atomic.AtomicLong;
+import java.util.concurrent.atomic.LongAdder;
 
 public class Shop {
-    AtomicLong money = new AtomicLong(0);
+    LongAdder money = new LongAdder();
 
     public void transfer(int dayOfMounth, String mounth, long diff) {
         System.out.printf("Магазин %s, выручка за %d %s, составила = %d \n", Thread.currentThread().getName(), dayOfMounth + 1,
                 mounth, diff);
-        money.addAndGet(diff);
+        money.add(diff);
     }
 
     public long storeSum() {
-        return money.get();
+        return money.sum();
     }
 }
